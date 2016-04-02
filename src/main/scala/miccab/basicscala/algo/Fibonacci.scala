@@ -15,6 +15,7 @@ object Fibonacci extends App {
     n match {
       case 0 => 0
       case 1 => 1
+      case x if x < 0 => 0
       case _ => fibRecursive(n-1) + fibRecursive(n-2)
     }
   }
@@ -42,6 +43,10 @@ object Fibonacci extends App {
       case 0 => prev
       case _ => internalFib(n-1, prev, prev + prev2)
     }
-    internalFib(n-1, 0, 1)
+    if (n < 1) {
+      0
+    } else {
+      internalFib(n - 1, 0, 1)
+    }
   }
 }
