@@ -7,10 +7,6 @@ import scala.annotation.tailrec
   */
 object Fibonacci extends App {
 
-  println(fibImperative(14))
-  println(fibRecursive(14))
-  println(fibTailRecursive(14))
-
   def fibRecursive(n : Int) : Int = {
     n match {
       case 0 => 0
